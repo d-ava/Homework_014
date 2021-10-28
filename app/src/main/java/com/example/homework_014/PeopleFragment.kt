@@ -22,6 +22,7 @@ class PeopleFragment :
         adapter.addLoadStateListener { loadState ->
             binding.recycler.isVisible = loadState.source.refresh is LoadState.NotLoading
             binding.progressBar.isVisible = loadState.source.refresh is LoadState.Loading
+            binding.progressBarOut.isVisible = loadState.source.refresh is LoadState.Loading
 
 
         }
@@ -36,7 +37,7 @@ class PeopleFragment :
             header = PeopleLoadStateAdapter { adapter.retry() },
             footer = PeopleLoadStateAdapter { adapter.retry() }
         )
-        // adapter.withLoadStateHeaderAndFooter()
+
 
 
         lifecycleScope.launchWhenCreated {

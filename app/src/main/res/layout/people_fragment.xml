@@ -13,10 +13,25 @@
         android:id="@+id/progressBar"
         style="@style/Widget.AppCompat.ProgressBar"
         android:elevation="50dp"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
         android:rotation="-50"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBarOut"
+        style="@style/Widget.AppCompat.ProgressBar"
+
+        android:elevation="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+
+        android:rotation="50"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
